@@ -6,7 +6,7 @@ class Restaurant
 		#Restaurant.define_dish(@ds.methods.grep(/^get_(.*)_info$/))
 	end
 
-	def self.define_dish(names)
+	def self.define_dish(*names)
 		names.each do |name|
 			define_method(name) do
 				info = @ds.send "get_#{name}_info", @id
