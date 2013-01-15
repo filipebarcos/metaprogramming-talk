@@ -1,10 +1,28 @@
 class DataSource
-	def get_steak_info(restaurant_id); end
-	def get_steak_price(restaurant_id); end
-	def get_ribs_info(restaurant_id); end
-	def get_ribs_price(restaurant_id); end
-	def get_pasta_info(restaurant_id); end
-	def get_pasta_price(restaurant_id); end
+
+	def get_steak_info(restaurant_id)
+		"Garlic Steak"
+	end
+
+	def get_steak_price(restaurant_id)
+		30
+	end
+
+	def get_ribs_info(restaurant_id)
+		"BBQ Ribs"
+	end
+
+	def get_ribs_price(restaurant_id)
+		25
+	end
+
+	def get_pasta_info(restaurant_id)
+		"Mac 'n Cheese"
+	end
+
+	def get_pasta_price(restaurant_id)
+		10
+	end
 	#...
 end
 

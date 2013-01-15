@@ -1,6 +1,6 @@
-class Restaurant
-	def initialize(restaurant_id, data_source)
-		@id = restaurant_id
+class Computer
+	def initialize(computer_id, data_source)
+		@id = computer_id
 		@ds = data_source
 	end
 
@@ -9,15 +9,14 @@ class Restaurant
 		info = @ds.send("get_#{name}_info", @id)
 		price = @ds.send("get_#{name}_price", @id)
 		result = "#{name.to_s.capitalize}: #{info} ($#{price})"
-		return "* #{result}" if price >= 25
+		return "* #{result}" if price >= 100
 		result
 	end
-
 end
 
 
-require './data_source'
 
-restaurant = Restaurant.new(1, DataSource.new)
-
-p restaurant.steak
+require './data_source_computer'
+computer = Computer.new(1, DataSourceComputer.new)
+p computer.mouse
+p computer.display

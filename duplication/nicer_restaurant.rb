@@ -27,3 +27,9 @@ class Restaurant
 		result
 	end
 end
+
+require './data_source'
+
+restaurant = Restaurant.new(1, DataSource.new)
+
+p restaurant.steak
