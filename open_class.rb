@@ -9,7 +9,9 @@ end
 
 class Array
 	def replace(from, to)
-		each_with_index do { |elem, i| self[i] = to if elem == from }
+		each_with_index do |elem, i|
+			self[i] = to if elem == from
+		end
 	end
 end
 
